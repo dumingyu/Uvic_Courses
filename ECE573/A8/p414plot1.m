@@ -1,0 +1,11 @@
+%Generate a plot that displays the data curve u versus t;
+P414;
+plot(t,u);
+%Generate a plot to show both x1 and its estimate x1_tilda;
+plot(t,x1,'--',t,x1_test,':');
+%Generate a plot to show both x2 and its estimate x2_tilda;
+plot(t,x2,'--',t,x2_test,':');
+%Compute average 2-norm estimation errors with n = 512;
+n =512;
+result1 = norm(x1_test - x1, 2)/sqrt(n);
+result2 = norm(x2_test - x2, 2)/sqrt(n);
